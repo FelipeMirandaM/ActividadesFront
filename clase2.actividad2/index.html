@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <script src="validar.js"></script>
+</head>
+
+<body>
+    <br><br>
+    <form>
+        <div class="container">
+            <div class="row text-center justify-content-md-center mb-3">
+                <h2>Sistema de notas</h2>
+                <br>
+                <hr>
+                <div class="col col-lg-1">
+                    Nota 1:
+                </div>
+                <div class="col col-lg-2">
+                    <input class="form-control" type="text" id="nota1" onkeyup="validar(this)">
+                </div>
+                <div class="col col-lg-2" id="errornota1">
+                    ***
+                </div>
+            </div>
+            <div class="row text-center justify-content-md-center mb-3">
+                <div class="col col-lg-1">
+                    Nota 2:
+                </div>
+                <div class="col col-lg-2">
+                    <input class="form-control" type="text" id="nota2" onkeyup="validar(this)">
+                </div>
+                <div class="col col-lg-2" id="errornota2">
+                    ***
+                </div>
+            </div>
+            <div class="row text-center justify-content-md-center mb-3">
+                <div class="col col-lg-1">
+                    Nota 3:
+                </div>
+                <div class="col col-lg-2">
+                    <input class="form-control" type="text" id="nota3" onkeyup="validar(this)">
+                </div>
+                <div class="col col-lg-2" id="errornota3">
+                    ***
+                </div>
+            </div>
+            <div class="row text-center justify-content-md-center mb-3">
+                <div class="col col-lg-1">
+                    Nota 4:
+                </div>
+                <div class="col col-lg-2">
+                    <input class="form-control" type="text" id="nota4" onkeyup="validar(this)">
+                </div>
+                <div class="col col-lg-2" id="errornota4">
+                    ***
+                </div>
+            </div>
+            <div class="row text-center justify-content-md-center mb-3">
+                <div class="col col-lg-1">
+                    Examen:
+                </div>
+                <div class="col col-lg-2">
+                    <input class="form-control" type="text" id="examen" onkeyup="validar(this)">
+                </div>
+                <div class="col col-lg-2" id="errorexamen">
+                    ***
+                </div>
+            </div>
+            <div class="row text-center justify-content-md-center mb-3">
+                <span>Nota parcial: <span id="notaParcial">1.0</span> </span>
+                <span>Nota parcial: <span id="notaFinal">1.0 </span> </span>
+                <span>Estado: <span id="estado">F</span> </span>
+                <div class="col col-lg-1">
+                </span>
+                <div class="col col-lg-2">
+                   <input type="button" class="btn btn-primary" id="botonvalidar" value="Calcular"
+                   onclick="validarTodos();">
+                   <input type="reset" class="btn btn-warning" id="botonlimpiar" value="Limpiar">
+                </div>
+                
+            </div>
+            <div class="row text-center justify-content-md-center mb-2">
+                <div class="col col-lg-3">
+
+                    <div id="mensajefinal"></div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </form>
+</body>
+
+</html>

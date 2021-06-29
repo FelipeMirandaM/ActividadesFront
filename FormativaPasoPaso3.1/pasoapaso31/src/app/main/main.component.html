@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="mb-3">
+        <h1>Tienda magica</h1>
+        <label class="form-label">Seleccione un producto</label>
+        <select [(ngModel)] = "selected" name = "selectitem" class="form-select" aria-label="Default select example" [ngClass]="{ 'is-invalid': invalidproduct }"> 
+            <option *ngFor="let item of list" value = {{item.codigo}}>{{item.nombre}}</option>
+          </select>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Cantidad</label>
+        <input type="number" [(ngModel)] = "cantidad" class="form-control" [ngClass]="{ 'is-invalid': invalidammount }">
+        <div *ngIf = invalidammount class="alert alert-danger" role="alert">
+            {{mensaje}}
+          </div>
+      </div>
+      <button class="btn btn-primary" (click)="buy()">Comprar</button>
+
+      <h2>SubTotal: {{subTotal | currency:'$'}}</h2>
+      <h2>iva: {{iva | currency:'$'}}</h2>
+      <h2>total: {{total | currency:'$'}}</h2>
+</div>

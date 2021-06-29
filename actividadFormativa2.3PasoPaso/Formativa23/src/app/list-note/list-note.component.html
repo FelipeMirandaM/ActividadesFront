@@ -1,0 +1,61 @@
+<div class="container">
+    <h1>Calculo de notas</h1>
+    <form [formGroup]="formulario" (ngSubmit)="enviar()">
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text">Rut: </span>
+            <input  class="form-control" type="text" formControlName="rut">
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text">Nombre: </span>
+            <input  class="form-control" type="text" formControlName="nombre">
+        </div>
+
+
+        <div formGroupName="notas">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Nota 1: </span>
+                <input  class="form-control" type="text" formControlName="nota1">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Nota 2: </span>
+                <input  class="form-control" type="text" formControlName="nota2">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Nota 3: </span>
+                <input  class="form-control" type="text" formControlName="nota3">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Nota 4: </span>
+                <input  class="form-control" type="text" formControlName="nota4">
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Examen: </span>
+                <input  class="form-control" type="text" formControlName="examen">
+            </div>
+
+            
+    
+        </div>
+
+        <button class="btn btn-primary" type="submit">enviar</button>
+
+    </form>
+            <div>
+                <p>Nota presentacion: {{presentacion}}</p>
+            </div>
+
+            <div>
+                <p>Nota final: {{final}}</p>
+            </div>
+
+            <div>
+                <p>Resultado: {{resultado}}</p>
+            </div>
+        
+
+    
+    
+    
+</div>
